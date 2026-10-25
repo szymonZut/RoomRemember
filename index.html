@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Room Memory</title>
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <span>Round <b id="rn">1</b></span>
+    <span class="mid">
+      <span id="goalw">Goal <b id="goal">0</b></span>
+      <span id="phase"></span>
+    </span>
+    <span class="r">Score <b id="sc">0</b></span>
+  </header>
+  <div id="bar"><i id="fill"></i></div>
+
+  <div id="board" data-phase="idle">
+    <div id="floor"></div>
+    <div id="tray"></div>
+    <div id="grid"></div>
+    <span class="wl wp">furniture shelf</span>
+
+    <div id="banner">Rebuild!</div>
+    <div id="perfect"></div>
+
+    <div id="intro" class="out">
+      <small id="irn">Round 1</small>
+      <h2>Memorize the room layout</h2>
+      <div id="igrow"></div>
+      <div id="igoal"></div>
+      <div id="cd"></div>
+    </div>
+  </div>
+
+  <p id="msg"></p>
+  <button class="main" id="act">Start</button>
+</div>
+
+<div class="ov" id="o-start"><div class="stack">
+  <div class="brand">
+    <img class="logo" src="img/logo.png" alt="Room Memory"
+         onerror="this.classList.add('hide');document.getElementById('logo-fb').classList.remove('hide')">
+    <h1 class="hide" id="logo-fb">🏠 Room Memory</h1>
+  </div>
+  <div class="box">
+    <p class="sub">Memorize the room layout, then rebuild it exactly the same.</p>
+    <input id="nick" maxlength="16" placeholder="Enter your nickname" autocomplete="off">
+    <button class="main" id="go">Start game</button>
+    <p class="note" id="rules"></p>
+    <h2>🏆 Local leaderboard</h2><div class="lb"></div>
+  </div>
+</div></div>
+
+<div class="ov hide" id="o-end"><div class="box">
+  <p class="sub" style="margin:0">Game over, <b id="en"></b>!</p>
+  <p class="big"><span id="fs">0</span> pts</p>
+  <p class="sub" id="fm"></p>
+  <button class="main" id="again">Play again</button>
+  <h2>🏆 Local leaderboard</h2><div class="lb"></div>
+</div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
